@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="../index.css">
+    <title>Crew</title>
+    <!-- Icons -->
+    <script defer src="https://kit.fontawesome.com/d4ec29ec13.js"></script>
+    <script defer src="../index.js"></script>
+    <script defer src="./crew.js"></script>
+</head>
+
+<body class="crew">
+    <a href="#main" class="skip-to-content">Skip to content</a>
+    <header class="primary-header flex">
+        <div class="icon">
+            <i id="sun" class="fa-solid fa-sun"></i>
+            <span>
+                <i id="earth" class="fa-solid fa-earth-americas"></i>
+            </span>
+        </div>
+        <button class="mobile-nav-toggle"><span class="sr-only" aria-controls="primary-controls"
+                aria-expanded="false">Menu</span></button>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                <li>
+                    <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="../index.html">
+                        <span aria-hidden="true">00</span>Home
+                    </a>
+                </li>
+                <li>
+                    <a class="uppercase ff-sans-cond text-white letter-spacing-2"
+                        href="../destination/destination.html">
+                        <span aria-hidden="true">01</span>Destination
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="./crew.html">
+                        <span aria-hidden="true">02</span>Crew
+                    </a>
+                </li>
+                <li>
+                    <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="technology.html">
+                        <span aria-hidden="true">03</span>Technology
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--crew flow">
+        <h1 class="numbered-title">
+            <span aria-hidden="true">02</span>
+            Meet your crew
+        </h1>
+        <div class="tab-list dot-indicators flex" role="tablist" aria-label="crew-list">
+            <button aria-selected="true" data-image="crew-member-1-image" tabindex="0" role="tab"
+                aria-controls="crew-member-1-tab">
+                <span class="sr-only">Commander</span>
+            </button>
+            <button aria-selected="false" data-image="crew-member-2-image" tabindex="-1" role="tab"
+                aria-controls="crew-member-2-tab">
+                <span class="sr-only">Flight Engineer</span>
+            </button>
+            <button aria-selected="false" data-image="crew-member-3-image" tabindex="-1" role="tab"
+                aria-controls="crew-member-3-tab">
+                <span class="sr-only">Pilot</span>
+            </button>
+            <button aria-selected="false" data-image="crew-member-4-image" tabindex="-1" role="tab"
+                aria-controls="crew-member-4-tab">
+                <span class="sr-only">Mission Specialist</span>
+            </button>
+        </div>
+
+        <!-- Commander -->
+        <article class="crew-info flow" tabindex="0" id="crew-member-1-tab" role="tabpanel">
+            <header class="flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase text-white">Commander</h2>
+                <p class="fs-700 ff-serif uppercase">Douglas Hurley</p>
+            </header>
+            <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot
+                and former NASA astronaut. He launched into space for the third time as
+                commander of Crew Dragon Demo-2.
+            </p>
+        </article>
+
+        <!-- Flight Engineer -->
+        <article class="crew-info flow" hidden tabindex="-1" id="crew-member-2-tab" role="tabpanel">
+            <header class="flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase text-white">Flight Engineer</h2>
+                <p class="fs-700 ff-serif uppercase">Anousheh Ansari</p>
+            </header>
+            <p>Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems.
+                Ansari was the fourth self-funded space tourist, the first self-funded woman to
+                fly to the ISS, and the first Iranian in space.
+            </p>
+        </article>
+
+        <!-- Pilot -->
+        <article class="crew-info flow" hidden tabindex="-1" id="crew-member-3-tab" role="tabpanel">
+            <header class="flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase text-white">Pilot</h2>
+                <p class="fs-700 ff-serif uppercase">Victor Glover</p>
+            </header>
+            <p>Pilot on the first operational flight of the SpaceX Crew Dragon to the
+                International Space Station. Glover is a commander in the U.S. Navy where
+                he pilots an F/A-18.He was a crew member of Expedition 64, and served as a
+                station systems flight engineer.
+            </p>
+        </article>
+
+        <!-- Mission Specialist -->
+        <article class="crew-info flow" hidden tabindex="-1" id="crew-member-4-tab" role="tabpanel">
+            <header class="flow--space-small">
+                <h2 class="fs-600 ff-serif uppercase text-white">Mission Specialist</h2>
+                <p class="fs-700 ff-serif uppercase">Mark Shuttleworth</p>
+            </header>
+            <p>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind
+                the Linux-based Ubuntu operating system. Shuttleworth became the first South
+                African to travel to space as a space tourist.
+            </p>
+        </article>
+        <picture id="crew-member-1-image">
+            <source srcset="../assets/crew/image-douglas-hurley.webp" type="image/webp">
+            <img src="../assets/crew/image-douglas-hurley.png" alt="crew-member-1">
+        </picture>
+        <picture hidden id="crew-member-2-image">
+            <source srcset="../assets/crew/image-anousheh-ansari.webp" type="image/webp">
+            <img src="../assets/crew/image-anousheh-ansari.png" alt="crew-member-2">
+        </picture>
+        <picture hidden id="crew-member-3-image">
+            <source srcset="../assets/crew/image-victor-glover.webp" type="image/webp">
+            <img src="../assets/crew/image-victor-glover.png" alt="crew-member-3">
+        </picture>
+        <picture hidden id="crew-member-4-image">
+            <source srcset="../assets/crew/image-mark-shuttleworth.webp" type="image/webp">
+            <img src="../assets/crew/image-mark-shuttleworth.png" alt="crew-member-4">
+        </picture>
+    </main>
+
+</body>
+
+</html>
